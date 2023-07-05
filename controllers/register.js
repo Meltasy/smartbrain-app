@@ -1,5 +1,6 @@
 const handleRegister = (db, bcrypt) => (req, res) => {
     const { email, password, name } = req.body;
+    console.log('Received a register request.');
     if (!email || !password || !name) {
         return res.status(400).json('The form hasn\'t been filled in correctly.');
     }

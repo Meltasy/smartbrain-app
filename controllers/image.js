@@ -1,5 +1,6 @@
 const handleImage = (db) => (req, res) => {
     const { id } = req.body;
+    console.log('Received an image request.');
     db('users').where('id', '=', id)
     .increment('entries', 1)
     .returning('entries')

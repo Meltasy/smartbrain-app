@@ -1,5 +1,6 @@
 const handleProfileGet = (db) => (req, res) => {
     const { id } = req.params;
+    console.log('Received a profile request.');
     db.select('*').from('users').where({id})
     .then(user => {
         if (user.length) {
